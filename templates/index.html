@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>⚡ Neon Gestures X</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="theme-blue">
+  <canvas id="bgFX"></canvas>
+
+  <header class="topbar">
+    <h1 class="title"><span class="bolt">⚡</span> Neon Gestures X</h1>
+    <p class="subtitle">Real‑time Hand Gesture Recognition</p>
+  </header>
+
+  <main class="wrapper">
+    <section class="stage">
+      <div class="camera-frame">
+        <video id="video" autoplay playsinline class="mirrored"></video>
+        <canvas id="canvas" class="hidden"></canvas>
+        <div class="neon-border"></div>
+      </div>
+
+      <div class="hud">
+        <div class="hud-title">Detected Gesture</div>
+        <div class="hud-row">
+          <div id="emoji" class="emoji">🖐️</div>
+          <div>
+            <div id="label" class="label">Waiting...</div>
+            <div id="score" class="score">—</div>
+          </div>
+        </div>
+        <div class="chips">
+          <span>✋ Open</span><span>✊ Fist</span><span>👍 Up</span><span>👎 Down</span>
+          <span>👆 Point</span><span>🤙 Call</span><span>👌 OK</span><span>✌️ Peace</span>
+          <span>⬅️ Swipe Left</span><span>➡️ Swipe Right</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="credits">Done by <b>Sankarshana S N</b> and <b>Samarth R Choudhary</b></footer>
+
+    <footer class="controls">
+      <button id="startBtn" class="btn primary">Start Camera</button>
+      <button id="stopBtn" class="btn">Stop</button>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
